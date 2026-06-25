@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Appointments | Nicole Hann Psychology</title>
+  <meta name="description" content="Book an appointment or get in touch with Nicole Hann Psychology — Counselling Psychologist, Padbury Perth WA. Telehealth immediately available." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="mainNav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" style="color:var(--dark);">
+        Nicole Hann Psychology
+        <span>Counselling Psychologist</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="health-plans.html">Fees &amp; Rebates</a></li>
+        <li><a href="contact.html" class="btn-nav">Book Online</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="health-plans.html">Fees &amp; Rebates</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn-nav">Book Online</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <h1>Contact &amp; Appointments</h1>
+    <p>Reach out — I'd love to hear from you</p>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- FORM -->
+        <div class="contact-form-wrap reveal">
+          <h2>Send a Message</h2>
+          <p class="form-note">Please state if you do NOT consent to a phone call. We use a private number to call you.</p>
+
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name <span style="color:#d4705a;">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span style="color:#d4705a;">*</span></label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number <span style="color:#d4705a;">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="04xx xxx xxx" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message <span style="color:#d4705a;">*</span></label>
+              <textarea id="message" name="message" placeholder="Tell me briefly what you're looking for help with, and whether you prefer in-person or Telehealth..." required></textarea>
+            </div>
+            <label class="form-checkbox">
+              <input type="checkbox" name="phoneConsent" id="phoneConsent" checked />
+              <span>I consent to being contacted by phone</span>
+            </label>
+            <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+          </form>
+
+          <div id="formSuccess" class="form-success">
+            <div class="success-icon">✓</div>
+            <h3>Thank you!</h3>
+            <p>We'll be in touch soon.</p>
+          </div>
+        </div>
+
+        <!-- PRACTICE INFO -->
+        <div class="contact-info reveal">
+          <h2>Getting to Your Appointment</h2>
+
+          <div class="info-item">
+            <div class="info-item-icon">📍</div>
+            <div class="info-item-text">
+              <strong>Address</strong>
+              <p>1c 73 Gibson Avenue, Padbury<br />4 doors down from Padbury Physio</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-item-icon">🚗</div>
+            <div class="info-item-text">
+              <strong>Parking</strong>
+              <p>Free parking available</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-item-icon">📋</div>
+            <div class="info-item-text">
+              <strong>What to bring</strong>
+              <p>Your referral or care plan and your Medicare card. For session cost please refer to your initial email.</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-item-icon">🚪</div>
+            <div class="info-item-text">
+              <strong>When you arrive</strong>
+              <p>My front glass door is generally locked until a couple of minutes before your appointment time. You are welcome to wait outside on the stairs until your appointment. If the door is unlocked please come in and take a seat until I come into the reception area to get you.</p>
+            </div>
+          </div>
+
+          <div class="map-wrap">
+            <img src="images/map.png" alt="Map to Nicole Hann Psychology, Padbury" />
+          </div>
+
+          <!-- HOURS -->
+          <div style="margin-top:32px;">
+            <h3 style="font-size:1.3rem;color:var(--dark);margin-bottom:14px;">Practice Hours</h3>
+            <ul class="hours-list">
+              <li><strong>Monday</strong> <span>9:30am – 2:30pm</span></li>
+              <li><strong>Tuesday</strong> <span>9:30am – 2:30pm</span></li>
+              <li><strong>Wednesday</strong> <span>9:30am – 5:30pm</span></li>
+              <li><strong>Thursday</strong> <span>Telehealth 9:00am – 2:30pm</span></li>
+              <li><strong>Saturday</strong> <span>Please enquire</span></li>
+            </ul>
+          </div>
+
+          <!-- DIRECT CONTACT -->
+          <div style="margin-top:28px;">
+            <h3 style="font-size:1.3rem;color:var(--dark);margin-bottom:14px;">Direct Contact</h3>
+            <div class="info-item" style="margin-bottom:12px;">
+              <div class="info-item-icon">✉️</div>
+              <div class="info-item-text">
+                <strong>Email</strong>
+                <a href="mailto:nicolehannpsychology@gmail.com" style="color:var(--primary);font-size:0.9rem;">nicolehannpsychology@gmail.com</a>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-item-icon">📞</div>
+              <div class="info-item-text">
+                <strong>Phone</strong>
+                <a href="tel:0474323092" style="color:var(--primary);font-size:0.9rem;">04 743 23 092</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Nicole Hann Psychology</div>
+        <p>Counselling Psychologist, Padbury WA</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="health-plans.html">Fees &amp; Rebates</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="footer-contact">
+        <a href="mailto:nicolehannpsychology@gmail.com">nicolehannpsychology@gmail.com</a>
+        <a href="tel:0474323092">04 743 23 092</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Nicole Hann Psychology. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
