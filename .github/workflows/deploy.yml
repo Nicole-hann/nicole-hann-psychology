@@ -14,4 +14,5 @@ jobs:
           curl -s -X POST "https://api.vercel.com/v13/deployments?projectId=prj_Vfndro032e1XJ9uC9gKSICiX0W74" \
             -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
             -H "Content-Type: application/json" \
-            -d '{"name":"nicole-hann-psychology","gitSource":{"type":"github","org":"Nicole-hann","repo":"nicole-hann-psychology","ref":"main"}}'
+            -d '{"name":"nicole-hann-psychology","target":"production","gitSource":{"type":"github","org":"Nicole-hann","repo":"nicole-hann-psychology","ref":"main"}}'
+
