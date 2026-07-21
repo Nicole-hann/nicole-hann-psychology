@@ -266,7 +266,7 @@ img {
   justify-content: center;
   text-align: center;
   padding: 120px 24px 80px;
-  background: transparent;
+  background: var(--light-bg);
   position: relative;
 }
 
