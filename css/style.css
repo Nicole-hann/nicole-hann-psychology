@@ -266,7 +266,7 @@ img {
   justify-content: center;
   text-align: center;
   padding: 120px 24px 80px;
-  background: #f9f7f4;
+  background: transparent;
   position: relative;
 }
 
@@ -274,9 +274,7 @@ img {
   content: '';
   position: absolute;
   inset: 0;
-  background: 
-    radial-gradient(ellipse at 20% 50%, rgba(90,122,110,0.08) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(196,168,130,0.1) 0%, transparent 50%);
+  background: transparent;
   pointer-events: none;
 }
 
