@@ -299,6 +299,8 @@ img {
   border: none;
   box-shadow: none;
   padding: 0;
+  mix-blend-mode: screen;
+  filter: brightness(0.95) contrast(1.05);
 }
 
 .hero-divider {
