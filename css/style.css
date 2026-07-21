@@ -289,9 +289,10 @@ img {
 }
 
 .hero-logo {
-  width: min(700px, 90vw);
+  width: min(280px, 80vw);
   height: auto;
   margin-bottom: 32px;
+  object-fit: contain;
 }
 
 .hero-divider {
