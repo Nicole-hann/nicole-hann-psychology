@@ -448,14 +448,20 @@ img {
 }
 
 /* ===== ABOUT SECTION ===== */
+.about-text {
+  max-width: 700px;
+}
+
 .about-text p {
   margin-bottom: 18px;
 }
 
 .about-img {
-  border-radius: var(--radius);
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: var(--shadow);
+  box-shadow: none;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .about-img img {
@@ -1032,6 +1038,11 @@ img {
 @media (max-width: 600px) {
   .section {
     padding: 70px 20px;
+  }
+
+  .about-img {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
   }
 
   .about-img img {
