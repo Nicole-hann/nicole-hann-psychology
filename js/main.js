@@ -1,21 +1,32 @@
-// Hamburger menu
-const hamburger = document.querySelector('.hamburger');
-const mobileMenu = document.querySelector('.mobile-menu');
+// Hamburger menu - Mobile navigation toggle
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.querySelector('.mobile-menu');
 
-if (hamburger && mobileMenu) {
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-  });
-  
-  // Close menu when a link is clicked
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
     });
-  });
-}
+    
+    // Close menu when a link is clicked
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      }
+    });
+  }
+});
 
 // Scroll reveal
 const revealObserver = new IntersectionObserver((entries) => {
