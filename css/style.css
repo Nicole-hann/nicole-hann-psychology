@@ -457,6 +457,13 @@ img {
   margin-bottom: 18px;
 }
 
+/* About layout — stacked on mobile, side-by-side on desktop */
+.about-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
 .about-img {
   border-radius: 0;
   overflow: hidden;
@@ -473,17 +480,30 @@ img {
 }
 
 @media (min-width: 768px) {
+  .about-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
   .about-img {
-    width: 100%;
+    width: 380px;
+    min-width: 320px;
+    flex-shrink: 0;
     margin-left: 0;
-    max-height: 600px;
   }
 
   .about-img img {
-    height: 600px;
-    object-fit: contain;
-    object-position: center;
-    background: #f9f5f0;
+    width: 100%;
+    height: auto;
+    max-height: 580px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 8px;
+  }
+
+  .about-text {
+    flex: 1;
   }
 }
 
