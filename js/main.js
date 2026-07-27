@@ -1,46 +1,22 @@
-// Hamburger menu - Mobile navigation toggle
-function initMobileMenu() {
-  const hamburger = document.querySelector('.hamburger');
-  const mobileMenu = document.querySelector('.mobile-menu');
+// Hamburger menu - Simple toggle
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
 
-  if (!hamburger || !mobileMenu) return;
-
-  // Toggle menu on hamburger click
-  hamburger.addEventListener('click', (e) => {
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
-    console.log('Hamburger clicked'); // Debug
     hamburger.classList.toggle('open');
     mobileMenu.classList.toggle('open');
   });
   
-  // Close menu when any link is clicked
-  const links = mobileMenu.querySelectorAll('a');
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      console.log('Link clicked'); // Debug
+  // Close menu when clicking a link
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function() {
       hamburger.classList.remove('open');
       mobileMenu.classList.remove('open');
     });
   });
-  
-  // Close menu when clicking outside
-  document.addEventListener('click', (e) => {
-    const isClickInsideMenu = mobileMenu.contains(e.target);
-    const isClickOnHamburger = hamburger.contains(e.target);
-    
-    if (!isClickInsideMenu && !isClickOnHamburger && hamburger.classList.contains('open')) {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-    }
-  });
-}
-
-// Initialize on load
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initMobileMenu);
-} else {
-  initMobileMenu();
 }
 
 // Scroll reveal
