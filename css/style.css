@@ -161,6 +161,7 @@ img {
   padding: 4px;
   background: none;
   border: none;
+  z-index: 1001;
 }
 
 .hamburger span {
@@ -181,10 +182,8 @@ img {
 .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
 .mobile-menu {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 70px;
   left: 0;
   right: 0;
   background: var(--white);
@@ -192,10 +191,14 @@ img {
   gap: 16px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
   z-index: 999;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
 .mobile-menu.open {
-  display: flex !important;
+  max-height: 500px;
 }
 
 .mobile-menu a {

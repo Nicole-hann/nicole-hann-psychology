@@ -1,23 +1,28 @@
-// Hamburger menu - Simple toggle
-const hamburger = document.querySelector('.hamburger');
-const mobileMenu = document.querySelector('.mobile-menu');
-
-if (hamburger && mobileMenu) {
-  hamburger.addEventListener('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-  });
+// Mobile menu toggle
+window.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.querySelector('.hamburger');
+  var mobileMenu = document.querySelector('.mobile-menu');
   
-  // Close menu when clicking a link
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', function() {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-    });
-  });
-}
+  if (hamburger && mobileMenu) {
+    // Toggle menu
+    hamburger.onclick = function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      return false;
+    };
+    
+    // Close menu when link clicked
+    var links = mobileMenu.querySelectorAll('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].onclick = function() {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      };
+    }
+  }
+});
 
 // Scroll reveal
 const revealObserver = new IntersectionObserver((entries) => {
