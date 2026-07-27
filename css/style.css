@@ -290,11 +290,11 @@ img {
 }
 
 .hero-logo {
-  width: min(280px, 75vw);
+  width: min(560px, 85vw);
   height: auto;
   margin-bottom: 32px;
   object-fit: contain;
-  max-height: 280px;
+  max-height: 560px;
   background: transparent;
   border: none;
   box-shadow: none;
