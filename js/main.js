@@ -1,11 +1,19 @@
 // Hamburger menu
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
 
-if (hamburger && navMenu) {
+if (hamburger && mobileMenu) {
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('open');
-    navMenu.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  
+  // Close menu when a link is clicked
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    });
   });
 }
 
