@@ -168,7 +168,7 @@ img {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--white);
+  background: var(--dark);
   transition: var(--transition);
   border-radius: 2px;
 }
