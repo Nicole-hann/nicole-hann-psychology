@@ -3,9 +3,10 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { first_name, last_name, email, phone, message } = req.body;
+  const { name, first_name, last_name, email, phone, message } = req.body;
+  const fullName = name || `${first_name || ''} ${last_name || ''}`.trim();
 
-  if (!first_name || !last_name || !email || !phone || !message) {
+  if (!fullName || !email || !phone || !message) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
@@ -25,10 +26,10 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         from: 'nicole@manyhandz.ai',
         to: 'nicolehannpsychology@gmail.com',
-        subject: `New Contact Form Submission from ${first_name} ${last_name}`,
+        subject: `New Enquiry from ${fullName}`,
         html: `
           <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${first_name} ${last_name}</p>
+          <p><strong>Name:</strong> ${fullName}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Phone:</strong> ${phone}</p>
           <p><strong>Message:</strong></p>
