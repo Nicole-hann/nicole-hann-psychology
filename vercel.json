@@ -7,6 +7,12 @@
     { "source": "/fees", "destination": "/health-plans.html", "permanent": true },
     { "source": "/about", "destination": "/#about", "permanent": true },
     { "source": "/book", "destination": "/contact.html", "permanent": true },
-    { "source": "/booking", "destination": "/contact.html", "permanent": true }
+    { "source": "/booking", "destination": "/contact.html", "permanent": true },
+    { "source": "/anxiety-newlsetter", "destination": "/", "permanent": true },
+    { "source": "/anxiety-newsletter", "destination": "/", "permanent": true },
+    { "source": "/selfesteem", "destination": "/", "permanent": true },
+    { "source": "/blogs", "destination": "/", "permanent": true },
+    { "source": "/blog", "destination": "/", "permanent": true },
+    { "source": "/mindfulness", "destination": "/", "permanent": true }
   ]
 }
